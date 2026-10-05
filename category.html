@@ -289,8 +289,8 @@ const products = [
         model: "iPhone 13/14",
         price: 299,
         image: "iphone13.png",
-        imageWidth: "100%",
-        imageHeight: "250px"
+        imageWidth: "200px",
+        imageHeight: "350px"
     },
 
 
@@ -705,16 +705,19 @@ function displayProducts(productList) {
 
             <div class="product-image">
 
-
-                <img
-                    src="${product.image}"
-                    alt="${product.name}"
-
-                    onerror="
-                        this.style.display='none';
-                        this.nextElementSibling.style.display='flex';
-                    "
-                >
+    <img
+        src="${product.image}"
+        alt="${product.name}"
+        style="
+            width: ${product.imageWidth || '150px'};
+            height: ${product.imageHeight || '180px'};
+            object-fit: contain;
+        "
+        onerror="
+            this.style.display='none';
+            this.nextElementSibling.style.display='flex';
+        "
+    >
 
 
                 <div

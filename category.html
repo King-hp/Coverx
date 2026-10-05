@@ -289,8 +289,8 @@ const products = [
         model: "iPhone 13/14",
         price: 299,
         image: "iphone13.png",
-        imageWidth: "200px",
-        imageHeight: "350px"
+        imageWidth: "100%",
+        imageHeight: "250px"
     },
 
 
@@ -301,7 +301,9 @@ const products = [
         brand: "Vivo",
         model: "Vivo Y19 5G",
         price: 199,
-        image: "images/covers/vivo-y19.jpg"
+        image: "transparent.jpeg",
+        imageWidth: "100%",
+        imageHeight: "250px"
     },
 
 
@@ -312,7 +314,9 @@ const products = [
         brand: "Samsung",
         model: "Samsung A15",
         price: 249,
-        image: "images/covers/samsung-a15.jpg"
+        image: "s.p.jpeg",
+        imageWidth: "100%",
+        imageHeight: "250px"
     },
 
 
@@ -320,7 +324,7 @@ const products = [
 
     {
         id: 4,
-        name: "9D Full Screen Glass",
+        name: "0.3mm",
         category: "Glass",
         brand: "Apple",
         model: "iPhone 15",
@@ -331,7 +335,7 @@ const products = [
 
     {
         id: 5,
-        name: "Full Glue Tempered Glass",
+        name: "11D",
         category: "Glass",
         brand: "Vivo",
         model: "Vivo V40",
@@ -342,7 +346,7 @@ const products = [
 
     {
         id: 6,
-        name: "9H Tempered Glass",
+        name: "HD+",
         category: "Glass",
         brand: "Samsung",
         model: "Samsung A15",
@@ -350,11 +354,32 @@ const products = [
         image: "images/glass/samsung-a15.jpg"
     },
 
+  {
+        id: 7,
+        name: "Matt",
+        category: "Glass",
+        brand: "Samsung",
+        model: "Samsung A15",
+        price: 129,
+        image: "images/glass/samsung-a15.jpg"
+    },
+
+    {
+        id: 8,
+        name: "Privacy",
+        category: "Glass",
+        brand: "Samsung",
+        model: "Samsung A15",
+        price: 129,
+        image: "images/glass/samsung-a15.jpg"
+    },
+    
+  
 
     // ================= CAMERA LENS =================
 
     {
-        id: 7,
+        id: 9,
         name: "Camera Lens Protector",
         category: "Lens",
         brand: "Vivo",
@@ -365,7 +390,7 @@ const products = [
 
 
     {
-        id: 8,
+        id: 10,
         name: "Camera Lens Glass",
         category: "Lens",
         brand: "Apple",
@@ -376,7 +401,7 @@ const products = [
 
 
     {
-        id: 9,
+        id: 11,
         name: "Camera Protection Lens",
         category: "Lens",
         brand: "Samsung",
@@ -389,7 +414,7 @@ const products = [
     // ================= CHARGERS =================
 
     {
-        id: 10,
+        id: 12,
         name: "33W Fast Charger",
         category: "Charger",
         brand: "Realme",
@@ -400,7 +425,7 @@ const products = [
 
 
     {
-        id: 11,
+        id: 13,
         name: "25W Fast Charger",
         category: "Charger",
         brand: "Samsung",
@@ -411,7 +436,7 @@ const products = [
 
 
     {
-        id: 12,
+        id: 14,
         name: "67W Super Fast Charger",
         category: "Charger",
         brand: "Vivo",
@@ -424,7 +449,7 @@ const products = [
     // ================= CABLES =================
 
     {
-        id: 13,
+        id: 15,
         name: "Type-C Fast Charging Cable",
         category: "Cable",
         brand: "Oppo",
@@ -435,7 +460,7 @@ const products = [
 
 
     {
-        id: 14,
+        id: 16,
         name: "Type-C Data Cable",
         category: "Cable",
         brand: "Realme",
@@ -446,7 +471,7 @@ const products = [
 
 
     {
-        id: 15,
+        id: 17,
         name: "Lightning Cable",
         category: "Cable",
         brand: "Apple",
@@ -705,19 +730,16 @@ function displayProducts(productList) {
 
             <div class="product-image">
 
-    <img
-        src="${product.image}"
-        alt="${product.name}"
-        style="
-            width: ${product.imageWidth || '150px'};
-            height: ${product.imageHeight || '180px'};
-            object-fit: contain;
-        "
-        onerror="
-            this.style.display='none';
-            this.nextElementSibling.style.display='flex';
-        "
-    >
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+
+                    onerror="
+                        this.style.display='none';
+                        this.nextElementSibling.style.display='flex';
+                    "
+                >
 
 
                 <div
